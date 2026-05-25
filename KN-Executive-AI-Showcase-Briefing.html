@@ -807,6 +807,16 @@
   </style>
 </head>
 <body>
+<a href="#demo-overview" id="jump-overview" title="Jump back to demo overview"
+   style="position:fixed;bottom:24px;right:24px;z-index:9999;
+          background:#0063b0;color:#fff;text-decoration:none;
+          padding:10px 14px;border-radius:999px;font-weight:600;font-size:13px;
+          box-shadow:0 4px 14px rgba(0,0,0,0.25);display:flex;align-items:center;gap:8px;
+          transition:transform .15s, background .15s;"
+   onmouseover="this.style.background='#004f8c';this.style.transform='translateY(-2px)';"
+   onmouseout="this.style.background='#0063b0';this.style.transform='translateY(0)';">
+  ▲ Demo overview
+</a>
 <div class="shell">
   <aside>
     <div class="brand">KN Executive AI Showcase<span>26 May 2026 · Zürich</span></div>
@@ -848,7 +858,7 @@
       </details>
     </div>
 
-    <div class="demo-nav">
+    <div class="demo-nav" id="demo-overview">
       <div class="demo-nav-title">Quick Jump - all confirmed demos, grouped by track</div>
       <div class="demo-grid">
         <div class="demo-track-header"><span class="swatch" style="background:#0063b0;"></span>Microsoft 365 Copilot <span class="count">- 13 demos</span></div>
