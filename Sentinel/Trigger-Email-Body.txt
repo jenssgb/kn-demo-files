@@ -1,0 +1,14 @@
+To: admin@M365CPI98544940.onmicrosoft.com
+Subject: Excursion CMA-2847 SHA-HAM
+
+Carrier alert just in: container CMA-2847 (Contoso reefer, 40ft, set point -18C)
+recorded +3.2C deviation at 14:22 UTC during transhipment in Singapore.
+Unit reset, no spoilage indication yet, but Contoso SLA requires K+N
+notification + mitigation plan within 4 hours.
+
+ETA Hamburg unchanged for now. Please assess and confirm next steps.
+
+Carrier ref: CMA-WO-887211
+Vessel: CMA CGM Marco Polo (current)
+Booking: KN-BKG-2026-04471
+Reefer log attached separately by CMA portal.

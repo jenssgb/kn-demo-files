@@ -1,0 +1,86 @@
+openapi: 3.0.3
+info:
+  title: K+N Port Congestion API (Mock)
+  description: |
+    Mock API for the Lane Risk Sentinel demo. Returns congestion forecasts for major container ports.
+    In production this would be a real connector to MarineTraffic / Sea-Intelligence / port authority APIs.
+    For the CDX demo this endpoint is served by a static JSON in SharePoint OR a 30-line Azure Function.
+  version: "1.0.0"
+servers:
+  - url: https://kn-demo-portcongestion.azurewebsites.net
+    description: CDX demo mock (Azure Function)
+paths:
+  /v1/ports/{portCode}/congestion:
+    get:
+      summary: Get current congestion forecast for a port
+      operationId: GetPortCongestion
+      parameters:
+        - name: portCode
+          in: path
+          required: true
+          description: UN/LOCODE of the port (e.g. SGSIN, DEHAM, CNSHA)
+          schema:
+            type: string
+            example: SGSIN
+      responses:
+        '200':
+          description: Congestion forecast
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  portCode:
+                    type: string
+                    example: SGSIN
+                  portName:
+                    type: string
+                    example: Singapore
+                  asOfUtc:
+                    type: string
+                    format: date-time
+                  expectedDelayHours:
+                    type: number
+                    example: 28
+                  severity:
+                    type: string
+                    enum: [None, Low, Medium, High, Critical]
+                    example: Medium
+                  cause:
+                    type: string
+                    example: "Typhoon Mawar transhipment slowdown"
+                  validForHours:
+                    type: integer
+                    example: 24
+                  source:
+                    type: string
+                    example: "K+N port intelligence feed"
+              examples:
+                singaporeMedium:
+                  value:
+                    portCode: SGSIN
+                    portName: Singapore
+                    asOfUtc: "2026-02-13T14:30:00Z"
+                    expectedDelayHours: 28
+                    severity: Medium
+                    cause: "Typhoon Mawar transhipment slowdown"
+                    validForHours: 24
+                    source: "K+N port intelligence feed"
+                shanghaiLow:
+                  value:
+                    portCode: CNSHA
+                    portName: Shanghai
+                    asOfUtc: "2026-02-13T14:30:00Z"
+                    expectedDelayHours: 4
+                    severity: Low
+                    cause: "Normal seasonal volume"
+                    validForHours: 24
+                    source: "K+N port intelligence feed"
+components:
+  securitySchemes:
+    apiKeyHeader:
+      type: apiKey
+      in: header
+      name: X-Api-Key
+security:
+  - apiKeyHeader: []

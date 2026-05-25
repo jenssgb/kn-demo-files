@@ -1,0 +1,9 @@
+customer_id,name,segment,region,industry,annual_revenue_eur_2025,ytd_revenue_delta_pct,on_time_delivery_pct_q1_2025,on_time_delivery_pct_q1_2026,claim_rate_pct,avg_invoice_dispute_days,nps_2025q1,nps_2026q1,exec_relationship_score_0_10,contract_end_date,contract_value_eur_annual,days_since_last_qbr,recent_escalations_count_90d,competitive_threat_flag,share_of_wallet_pct,years_as_customer
+C001,Contoso Industries,Strategic,DACH,Industrial Manufacturing,18450000,-12.4,94.1,87.3,2.8,11,42,28,6,2027-03-31,18800000,28,4,Y,55,9
+C002,Fabrikam Pharma,Strategic,EMEA,Pharma & Healthcare,24800000,8.6,97.8,98.4,0.6,3,71,74,9,2028-12-31,24800000,42,0,N,82,12
+C003,Northwind Traders,Major,EMEA,Consumer Goods,7320000,-4.1,92.5,91.8,1.4,7,48,41,6,2027-06-30,7300000,95,1,N,38,6
+C004,Adventure Works,Major,DACH,Industrial Manufacturing,5610000,1.2,93.0,92.7,1.2,6,55,52,5,2027-01-31,5600000,118,0,N,28,5
+C005,Tailspin Toys,Growth,EMEA,Consumer Goods,2240000,34.7,95.3,96.1,0.9,4,62,67,7,2028-02-28,2200000,33,0,N,71,3
+C006,Wide World Importers,Major,APAC,Consumer Goods,9180000,-2.3,89.4,86.1,3.1,9,51,39,5,2027-09-30,9100000,67,2,N,44,7
+C007,Litware Chemicals,Strategic,DACH,Chemicals & High-Hazard,14920000,-7.8,94.7,90.2,2.1,18,58,31,4,2026-09-30,14900000,247,3,Y,68,11
+C008,Proseware Electronics,Growth,EMEA,High-Tech & Semicon,3850000,42.1,91.8,94.5,1.1,5,49,63,8,2028-08-31,3800000,21,0,N,52,2

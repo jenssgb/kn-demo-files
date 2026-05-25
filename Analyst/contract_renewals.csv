@@ -1,0 +1,9 @@
+customer_id,contract_id,start_date,end_date,value_eur_annual,auto_renew,last_renewal_negotiation_duration_days,renewal_status,next_qbr_date,exec_sponsor_kn,exec_sponsor_customer
+C001,CT-CON-2024-MA,2024-04-01,2027-03-31,18800000,N,84,Active,2026-05-22,Markus Johannsen,Anna Berg
+C002,CT-FAB-2025-MA,2025-01-01,2028-12-31,24800000,Y,42,Active,2026-06-15,Dominik Kotowicz,Sven Larsen
+C003,CT-NOR-2024-MA,2024-07-01,2027-06-30,7300000,N,38,Active,2026-08-04,Markus Johannsen,Helen Cross
+C004,CT-ADV-2024-MA,2024-02-01,2027-01-31,5600000,Y,29,Active,2026-09-14,Markus Johannsen,Tomas Reiner
+C005,CT-TAI-2025-MA,2025-03-01,2028-02-28,2200000,Y,21,Active,2026-06-28,Dominik Kotowicz,Mei Lin
+C006,CT-WWI-2024-MA,2024-10-01,2027-09-30,9100000,N,56,Active,2026-07-22,Markus Johannsen,Raj Patel
+C007,CT-LIT-2023-MA,2023-10-01,2026-09-30,14900000,N,112,Renewal Window Open,POSTPONED,Markus Johannsen,Klaus Brandt
+C008,CT-PRO-2025-MA,2025-09-01,2028-08-31,3800000,Y,14,Active,2026-06-04,Dominik Kotowicz,Yuki Tanaka

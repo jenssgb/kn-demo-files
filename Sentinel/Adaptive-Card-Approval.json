@@ -1,0 +1,87 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "msteams": { "width": "Full" },
+  "body": [
+    {
+      "type": "Container",
+      "style": "attention",
+      "items": [
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "width": "auto",
+              "items": [
+                { "type": "TextBlock", "text": "⚠️", "size": "ExtraLarge" }
+              ]
+            },
+            {
+              "type": "Column",
+              "width": "stretch",
+              "items": [
+                { "type": "TextBlock", "text": "HIGH risk on Contoso lane SHA-HAM", "weight": "Bolder", "size": "Large", "wrap": true },
+                { "type": "TextBlock", "text": "Lane Risk Sentinel · ${formatDateTime(asOfUtc, 'HH:mm')} UTC · Decision Ref ${decisionRef}", "isSubtle": true, "size": "Small", "wrap": true }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "FactSet",
+      "facts": [
+        { "title": "Shipment", "value": "CMA-2847 · 40RH reefer @ -18 °C" },
+        { "title": "Customer", "value": "Contoso Industries (MSA-CONTOSO-2024)" },
+        { "title": "Issue", "value": "Temp excursion +3.2 °C at 14:22 UTC Singapore transhipment" },
+        { "title": "External signal", "value": "Typhoon Mawar · Singapore transhipment +28 h forecast" },
+        { "title": "Sanctions check (MCP)", "value": "CLEAR · EU / OFAC / UK HMT / UN" },
+        { "title": "Risk reasoning", "value": "Cargo HIGH (temp deviation >2.5 °C) ∩ External MED → final HIGH" },
+        { "title": "Proposal", "value": "Reroute via HMM Algeciras → Antwerp + K+N barge to Hamburg" },
+        { "title": "ETA impact", "value": "+11 h vs original · −36 h vs no-action" },
+        { "title": "Cost delta", "value": "+€2,140 · within Contoso MSA ceiling €3,500" },
+        { "title": "MSA validation", "value": "All 6 reroute checks passed (carrier whitelist, mode, cost, ETA gain, sanctions, capacity)" }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "Choose an action · auto-escalation in 60 min if no response",
+      "size": "Small",
+      "isSubtle": true,
+      "spacing": "Medium"
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "✓ Approve reroute",
+      "style": "positive",
+      "data": { "action": "approve", "shipmentId": "CMA-2847", "proposalId": "ALT-010", "decisionRef": "${decisionRef}" }
+    },
+    {
+      "type": "Action.Submit",
+      "title": "✗ Reject · keep current",
+      "data": { "action": "reject", "shipmentId": "CMA-2847", "decisionRef": "${decisionRef}" }
+    },
+    {
+      "type": "Action.ShowCard",
+      "title": "✎ Modify",
+      "card": {
+        "type": "AdaptiveCard",
+        "body": [
+          { "type": "Input.ChoiceSet", "id": "modifyAction", "label": "What should change?", "choices": [
+            { "title": "Pick a different alternate lane", "value": "switch-lane" },
+            { "title": "Hold and monitor instead of reroute", "value": "hold" },
+            { "title": "Escalate to global duty officer", "value": "escalate" }
+          ]},
+          { "type": "Input.Text", "id": "reason", "label": "Reason (sent back to the agent)", "isMultiline": true, "placeholder": "..." }
+        ],
+        "actions": [
+          { "type": "Action.Submit", "title": "Send back to agent", "data": { "action": "modify", "shipmentId": "CMA-2847", "decisionRef": "${decisionRef}" } }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+shipmentId,customer,lane,origin,destination,carrier,container,mode,reeferSetpointC,reeferActualC,etaOriginal,etaCurrent,status,lastEvent,accountOwner,contractRef
+CMA-2847,Contoso Industries,SHA-HAM,Shanghai,Hamburg,CMA CGM,40RH,Sea,-18,-14.8,2026-02-14T08:00:00Z,2026-02-14T08:00:00Z,InTransit,Temp excursion +3.2C at SIN transhipment 14:22 UTC,admin@M365CPI98544940.onmicrosoft.com,MSA-CONTOSO-2024
+MSK-5512,Contoso Industries,HKG-RTM,Hong Kong,Rotterdam,Maersk,40HC,Sea,-20,-19.6,2026-02-11T06:00:00Z,2026-02-11T06:00:00Z,InTransit,On schedule,admin@M365CPI98544940.onmicrosoft.com,MSA-CONTOSO-2024
+HLC-9931,Contoso Industries,SIN-ANR,Singapore,Antwerp,Hapag-Lloyd,40RH,Sea,-18,-18.1,2026-02-18T10:00:00Z,2026-02-19T14:00:00Z,InTransit,Port Singapore congestion +28h forecast,admin@M365CPI98544940.onmicrosoft.com,MSA-CONTOSO-2024
+EK-7733,Contoso Industries,DXB-FRA,Dubai,Frankfurt,Emirates SkyCargo,LD3,Air,2,2.1,2026-02-09T03:30:00Z,2026-02-09T03:30:00Z,InTransit,On schedule,admin@M365CPI98544940.onmicrosoft.com,MSA-CONTOSO-2024
+CMA-2901,Contoso Industries,BSL-USEC,Busan,New York,CMA CGM,40HC,Sea,-18,-18.2,2026-02-22T16:00:00Z,2026-02-22T16:00:00Z,InTransit,On schedule,admin@M365CPI98544940.onmicrosoft.com,MSA-CONTOSO-2024
+MSK-5604,Contoso Industries,SHA-LAX,Shanghai,Los Angeles,Maersk,40HC,Sea,N/A,N/A,2026-02-13T11:00:00Z,2026-02-15T11:00:00Z,InTransit,USWC labour slowdown +48h forecast,admin@M365CPI98544940.onmicrosoft.com,MSA-CONTOSO-2024
+DHL-4407,Contoso Industries,LEJ-ORD,Leipzig,Chicago,DHL Express,LD3,Air,5,5.0,2026-02-08T22:00:00Z,2026-02-08T22:00:00Z,InTransit,On schedule,admin@M365CPI98544940.onmicrosoft.com,MSA-CONTOSO-2024
+HLC-9962,Contoso Industries,YOK-HAM,Yokohama,Hamburg,Hapag-Lloyd,40RH,Sea,-18,-17.9,2026-02-25T07:00:00Z,2026-02-25T07:00:00Z,InTransit,On schedule,admin@M365CPI98544940.onmicrosoft.com,MSA-CONTOSO-2024
+ONE-1184,Contoso Industries,TPE-LGB,Taipei,Long Beach,Ocean Network Express,40HC,Sea,N/A,N/A,2026-02-19T13:00:00Z,2026-02-19T13:00:00Z,InTransit,On schedule,admin@M365CPI98544940.onmicrosoft.com,MSA-CONTOSO-2024
+MSK-5689,Contoso Industries,SHA-HAM,Shanghai,Hamburg,Maersk,40RH,Sea,-18,-18.0,2026-02-16T09:00:00Z,2026-02-16T09:00:00Z,InTransit,On schedule,admin@M365CPI98544940.onmicrosoft.com,MSA-CONTOSO-2024
+CMA-3017,Contoso Industries,NSA-HAM,Nansha,Hamburg,CMA CGM,40HC,Sea,N/A,N/A,2026-02-21T05:00:00Z,2026-02-21T05:00:00Z,InTransit,On schedule,admin@M365CPI98544940.onmicrosoft.com,MSA-CONTOSO-2024
+EK-7805,Contoso Industries,DXB-AMS,Dubai,Amsterdam,Emirates SkyCargo,LD3,Air,5,4.9,2026-02-10T04:00:00Z,2026-02-10T04:00:00Z,InTransit,On schedule,admin@M365CPI98544940.onmicrosoft.com,MSA-CONTOSO-2024

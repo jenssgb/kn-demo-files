@@ -1,0 +1,11 @@
+capacityId,lane,origin,destination,carrier,vessel,departureUtc,etaUtc,modeRefeer,freeReeferSlots,costEurPerTeu,sanctionsClear,whitelistContoso
+ALT-001,SHA-HAM,Shanghai,Hamburg,Maersk,Maersk Hidalgo,2026-02-15T18:00:00Z,2026-03-14T07:00:00Z,Yes,12,2380,Yes,Yes
+ALT-002,SHA-HAM,Shanghai,Hamburg,Hapag-Lloyd,Berlin Express,2026-02-16T22:00:00Z,2026-03-15T11:00:00Z,Yes,8,2210,Yes,Yes
+ALT-003,SHA-ANR,Shanghai,Antwerp,HMM,HMM Algeciras,2026-02-15T06:00:00Z,2026-03-13T22:00:00Z,Yes,18,2140,Yes,Yes
+ALT-004,SHA-RTM,Shanghai,Rotterdam,CMA CGM,CMA CGM Jacques Saade,2026-02-17T03:00:00Z,2026-03-16T15:00:00Z,Yes,6,2520,Yes,Yes
+ALT-005,HKG-RTM,Hong Kong,Rotterdam,ONE,ONE Cygnus,2026-02-12T11:00:00Z,2026-03-11T08:00:00Z,Yes,4,2680,Yes,Yes
+ALT-006,SIN-ANR,Singapore,Antwerp,Maersk,Maersk Edinburgh,2026-02-19T20:00:00Z,2026-03-18T14:00:00Z,Yes,22,2090,Yes,Yes
+ALT-007,SHA-FRA,Shanghai,Frankfurt,Lufthansa Cargo,LH8401,2026-02-15T02:00:00Z,2026-02-15T18:00:00Z,No,N/A,N/A,Yes,No
+ALT-008,SHA-HAM,Shanghai,Hamburg,Hamburg Süd,Cap San Lazaro,2026-02-18T14:00:00Z,2026-03-17T06:00:00Z,Yes,10,2450,Yes,Yes
+ALT-009,SHA-HAM,Shanghai,Hamburg,MSC,MSC Diletta,2026-02-16T07:00:00Z,2026-03-14T19:00:00Z,Yes,14,2260,Yes,No
+ALT-010,SHA-HAM (barge from ANR),Shanghai,Hamburg via Antwerp,HMM + K+N barge,HMM Algeciras + KN-Rhein-12,2026-02-15T06:00:00Z,2026-03-15T08:00:00Z,Yes,18,2280,Yes,Yes

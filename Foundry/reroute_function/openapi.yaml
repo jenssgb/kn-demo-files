@@ -1,0 +1,171 @@
+openapi: 3.0.3
+info:
+  title: KN Lane Risk Sentinel — Backend Tools
+  version: "2.0.0"
+  description: |
+    Backend service for the Lane Risk Sentinel Foundry agent. Exposes
+    one compute endpoint and three action endpoints. The action endpoints
+    produce real side-effects in the KN demo tenant via Microsoft Graph
+    using the Function App's Managed Identity.
+servers:
+  - url: https://func-knfdry-e7c20f.azurewebsites.net/api
+    description: Azure Function (Switzerland North)
+
+paths:
+  /calculate_reroute:
+    post:
+      operationId: calculate_reroute
+      summary: Compute a reroute recommendation for a disrupted lane.
+      description: |
+        Pure compute, no side-effects. Returns markdown with current vs
+        proposed carrier, transit / cost deltas, risk score and estimated
+        savings. Call this whenever you need to evaluate a reroute — never
+        estimate these numbers yourself.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/RerouteRequest" }
+      responses:
+        "200":
+          description: Reroute recommendation in markdown.
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/MarkdownResponse" }
+
+  /send_approval_email:
+    post:
+      operationId: send_approval_email
+      summary: Dispatch an HTML approval e-mail for a reroute decision (ACTION).
+      description: |
+        Sends an HTML approval mail via Microsoft Graph to the demo
+        operator. Use this whenever the human has confirmed they want to
+        *act* on a reroute recommendation and you need a written approval
+        trail in their inbox. This is a real Graph sendMail — the recipient
+        will see the mail land in Outlook within seconds.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/EmailRequest" }
+      responses:
+        "200":
+          description: Mail accepted by Graph.
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/EmailResponse" }
+
+  /create_planner_task:
+    post:
+      operationId: create_planner_task
+      summary: Create a Planner task for a reroute approval (ACTION).
+      description: |
+        Creates a new task in the "KN Reroute Decisions" Planner plan via
+        Microsoft Graph. Use this when the decision must show up in a
+        team-level backlog rather than a personal inbox. Returns the new
+        task ID.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/PlannerRequest" }
+      responses:
+        "200":
+          description: Planner task created.
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/PlannerResponse" }
+
+  /log_decision_sharepoint:
+    post:
+      operationId: log_decision_sharepoint
+      summary: Append the decision to the SharePoint audit list (ACTION).
+      description: |
+        Adds a row to the "RerouteDecisions" SharePoint list — the demo's
+        system of record. Use this whenever a reroute decision is final
+        and you need a durable, queryable audit trail (EU AI Act Annex IV
+        evidence).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/SharePointRequest" }
+      responses:
+        "200":
+          description: List item created.
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/SharePointResponse" }
+
+components:
+  schemas:
+    RerouteRequest:
+      type: object
+      required: [origin, destination, current_carrier]
+      properties:
+        origin:          { type: string, example: SHA }
+        destination:     { type: string, example: HAM }
+        current_carrier: { type: string, example: CMA }
+
+    EmailRequest:
+      type: object
+      required: [shipment_id, new_carrier]
+      properties:
+        shipment_id: { type: string, example: CMA-2847 }
+        new_carrier: { type: string, example: HMM }
+        savings_eur: { type: integer, example: 47000 }
+        rationale:   { type: string, example: "Avoid Typhoon Mawar demurrage exposure." }
+
+    PlannerRequest:
+      type: object
+      required: [shipment_id, new_carrier]
+      properties:
+        shipment_id: { type: string, example: CMA-2847 }
+        new_carrier: { type: string, example: HMM }
+        savings_eur: { type: integer, example: 47000 }
+        notes:       { type: string, example: "Refer to playbook section 4.2." }
+
+    SharePointRequest:
+      type: object
+      required: [shipment_id, old_carrier, new_carrier]
+      properties:
+        shipment_id: { type: string, example: CMA-2847 }
+        old_carrier: { type: string, example: CMA }
+        new_carrier: { type: string, example: HMM }
+        risk_before: { type: integer, example: 87 }
+        risk_after:  { type: integer, example: 22 }
+        savings_eur: { type: integer, example: 47000 }
+        rationale:   { type: string, example: "Avoid Typhoon Mawar demurrage exposure." }
+
+    MarkdownResponse:
+      type: object
+      required: [markdown]
+      properties:
+        markdown: { type: string }
+
+    EmailResponse:
+      allOf:
+        - $ref: "#/components/schemas/MarkdownResponse"
+        - type: object
+          properties:
+            shipment_id:  { type: string }
+            new_carrier:  { type: string }
+            recipients:   { type: array, items: { type: string } }
+            graph_status: { type: integer }
+
+    PlannerResponse:
+      allOf:
+        - $ref: "#/components/schemas/MarkdownResponse"
+        - type: object
+          properties:
+            task_id: { type: string }
+            title:   { type: string }
+
+    SharePointResponse:
+      allOf:
+        - $ref: "#/components/schemas/MarkdownResponse"
+        - type: object
+          properties:
+            item_id: { type: string }
+            web_url: { type: string }
+            fields:  { type: object, additionalProperties: true }

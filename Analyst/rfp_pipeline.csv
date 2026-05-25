@@ -1,0 +1,9 @@
+rfp_id,customer_id,scope,value_eur_annual,status,decision_date,competitor_name,win_loss,lost_reason
+RFP-2025-Q3-014,C001,Asia-Europe Reefer (full lane),4200000,Decided,2025-09-15,DSV,Won,
+RFP-2025-Q4-021,C007,DACH Chemical Distribution Renewal Pilot,1800000,Decided,2025-11-22,Maersk Logistics,Lost,"Pricing 8% above benchmark; service complaints on hazmat docs"
+RFP-2026-Q1-007,C002,EU Pharma Cold-Chain Expansion,3600000,Decided,2026-02-10,DHL,Won,
+RFP-2026-Q1-019,C005,Toy Distribution APAC,950000,Decided,2026-03-04,DB Schenker,Won,
+RFP-2026-Q2-003,C007,2027 Hazmat Master Agreement (renewal RFP),14500000,In Progress,2026-09-15,Maersk + DSV,TBD,
+RFP-2026-Q2-008,C003,UK Distribution Renewal,2400000,In Progress,2026-07-31,Kerry Logistics,TBD,
+RFP-2026-Q2-012,C008,Semicon Air Freight Expansion,2100000,In Progress,2026-06-30,Expeditors,TBD,
+RFP-2026-Q2-018,C001,EMEA Road Spot Capacity,1200000,Decided,2026-04-28,Geodis,Lost,"Spot rates beaten by 11%; commercial flexibility cited"

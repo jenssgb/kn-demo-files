@@ -1,0 +1,75 @@
+{
+  "mcpVersion": "2025-03-26",
+  "name": "kn-sanctions-checker",
+  "description": "Mock MCP server exposing a single tool: check a counterparty (carrier, vessel, consignee, port) against consolidated sanctions lists (EU, OFAC, UK HMT, UN). For the Lane Risk Sentinel demo only - returns deterministic mock results.",
+  "homepage": "https://kn-demo-sanctions.azurewebsites.net",
+  "serverInfo": {
+    "name": "kn-sanctions-mcp",
+    "version": "0.9.0-demo"
+  },
+  "capabilities": {
+    "tools": {
+      "listChanged": false
+    }
+  },
+  "tools": [
+    {
+      "name": "check_counterparty",
+      "title": "Check counterparty against sanctions lists",
+      "description": "Returns CLEAR / FLAGGED / BLOCKED for a given counterparty across EU, OFAC, UK HMT and UN consolidated lists. The agent must call this for any rerouted shipment before sending a proposal.",
+      "inputSchema": {
+        "type": "object",
+        "required": ["entityType", "name"],
+        "properties": {
+          "entityType": {
+            "type": "string",
+            "enum": ["carrier", "vessel", "consignee", "port", "vesselImo"],
+            "description": "Type of entity to screen"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name or identifier of the entity"
+          },
+          "country": {
+            "type": "string",
+            "description": "ISO 3166 country code (optional)"
+          }
+        }
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "status": { "type": "string", "enum": ["CLEAR", "FLAGGED", "BLOCKED"] },
+          "matchedLists": { "type": "array", "items": { "type": "string" } },
+          "matchScore": { "type": "number", "minimum": 0, "maximum": 1 },
+          "checkedAtUtc": { "type": "string", "format": "date-time" },
+          "evidence": { "type": "string" }
+        }
+      }
+    }
+  ],
+  "sampleResponses": {
+    "carrier_Maersk_clear": {
+      "status": "CLEAR",
+      "matchedLists": [],
+      "matchScore": 0.0,
+      "checkedAtUtc": "2026-02-13T14:31:02Z",
+      "evidence": "No match in EU, OFAC, UK HMT, UN consolidated lists."
+    },
+    "vessel_HMM_Algeciras_clear": {
+      "status": "CLEAR",
+      "matchedLists": [],
+      "matchScore": 0.0,
+      "checkedAtUtc": "2026-02-13T14:31:03Z",
+      "evidence": "No match."
+    },
+    "carrier_demo_flagged": {
+      "status": "FLAGGED",
+      "matchedLists": ["EU CFSP 2024/745"],
+      "matchScore": 0.62,
+      "checkedAtUtc": "2026-02-13T14:31:04Z",
+      "evidence": "Name similarity to listed entity (62%). Manual review required."
+    }
+  },
+  "demoNotes": "For the live demo, all Contoso lanes return CLEAR. Switch the agent into 'sanctions exception' mode (Topic: Test_Sanctions_Flagged) to demonstrate the FLAGGED response path during Q&A."
+}
