@@ -861,13 +861,14 @@
     <div class="demo-nav" id="demo-overview">
       <div class="demo-nav-title">Quick Jump - all confirmed demos, grouped by track</div>
       <div class="demo-grid">
-        <div class="demo-track-header"><span class="swatch" style="background:#0063b0;"></span>Microsoft 365 Copilot <span class="count">- 13 demos</span></div>
+        <div class="demo-track-header"><span class="swatch" style="background:#0063b0;"></span>Microsoft 365 Copilot <span class="count">- 14 demos</span></div>
         <a href="#demo-01" class="demo-tile m365"><span class="tile-icon"><img src="https://img.icons8.com/fluency/96/microsoft-copilot.png" alt="Copilot" loading="lazy"></span><span class="tile-id">DEMO-01</span><span class="tile-name">Work IQ · Collaboration Summary</span></a>
         <a href="#demo-02" class="demo-tile m365"><span class="tile-icon"><img src="https://img.icons8.com/fluency/96/microsoft-copilot.png" alt="Copilot" loading="lazy"></span><span class="tile-id">DEMO-02</span><span class="tile-name">Agents in M365 Copilot · Agent Store tour</span></a>
         <a href="#demo-03" class="demo-tile m365"><span class="tile-icon"><img src="https://img.icons8.com/color/96/microsoft-teams.png" alt="Teams" loading="lazy"></span><span class="tile-id">DEMO-03</span><span class="tile-name">Facilitator agent · Customer Call Recap</span></a>
         <a href="#demo-04" class="demo-tile m365"><span class="tile-icon"><img src="https://img.icons8.com/fluency/96/microsoft-copilot.png" alt="Copilot" loading="lazy"></span><span class="tile-id">DEMO-04</span><span class="tile-name">Copilot Agent Builder · Service Status</span></a>
         <a href="#demo-05" class="demo-tile m365"><span class="tile-icon"><img src="https://img.icons8.com/color/96/microsoft-excel-2019--v1.png" alt="Excel" loading="lazy"></span><span class="tile-id">DEMO-05</span><span class="tile-name">Edit with Copilot in Excel · Margin Analyzer</span></a>
         <a href="#demo-05b" class="demo-tile m365"><span class="tile-icon"><img src="https://img.icons8.com/color/96/microsoft-excel-2019--v1.png" alt="Excel" loading="lazy"></span><span class="tile-id">DEMO-05B</span><span class="tile-name">Excel Quick-Win · 500 exception notes → action</span></a>
+        <a href="#demo-word" class="demo-tile m365"><span class="tile-icon"><img src="https://img.icons8.com/color/96/microsoft-word-2019--v1.png" alt="Word" loading="lazy"></span><span class="tile-id">DEMO-WORD</span><span class="tile-name">Copilot in Word · Q1 Margin Brief from 3 files</span></a>
         <a href="#demo-06" class="demo-tile m365"><span class="tile-icon"><img src="https://img.icons8.com/fluency/96/microsoft-copilot.png" alt="Copilot" loading="lazy"></span><span class="tile-id">DEMO-06</span><span class="tile-name">M365 Copilot Cowork · Q2 Turnaround</span></a>
         <a href="#demo-06b" class="demo-tile m365"><span class="tile-icon"><img src="https://img.icons8.com/fluency/96/microsoft-outlook-2019.png" alt="Outlook" loading="lazy"></span><span class="tile-id">DEMO-06B</span><span class="tile-name">Cowork Inbox Triage · 5 customer mails</span></a>
         <a href="#demo-06c" class="demo-tile m365"><span class="tile-icon"><img src="https://img.icons8.com/fluency/96/microsoft-outlook-2019.png" alt="Outlook" loading="lazy"></span><span class="tile-id">DEMO-06C</span><span class="tile-name">Cowork Quick-Send · Real email + meeting invite</span></a>
@@ -1215,6 +1216,66 @@ Then create a new sheet called "Summary" with:
             <li><strong>=COPILOT() cell function</strong> (Frontier / Insider) - AI as a formula: classify, summarise, extract per row.</li>
             <li><strong>Grounded in your file</strong> - no public web calls, the data stays in the workbook + your tenant.</li>
           </ul>
+        </div>
+      </details>
+
+      <details id="demo-word" class="demo-card prompt-card m365" style="--demo-color: #2b579a;">
+        <summary>
+          <span class="demo-chevron">▸</span>
+          <div class="summary-main">
+            <h3>Demo Word - Copilot in Word: Q1 Margin Brief grounded in 3 source files, in one prompt</h3>
+            <p class="prompt-meta">Word (Web/Desktop) · Draft + Rewrite + Chat · 3-4 min &nbsp; <span class="env-tag vm-tag vm-kn-demo">KN-Demo-VM</span><span class="env-tag user-tag user-kn-demo">KN-Demo-User</span></p>
+            <p style="margin:6px 0 0;font-size:12px;color:var(--cp-text-muted);">The "Word standard play". Same Contoso storyline as DEMO-04/05/06 - but here Copilot drafts a customer-facing one-pager from three reference files in seconds, lets you tighten the wording by selection, and answers questions about the live document. Ties directly into the Q2 turnaround narrative.</p>
+          </div>
+        </summary>
+        <div class="demo-body">
+          <div class="audience-line">"Three source files in - a customer-ready one-page Q1 margin brief out. Then we tighten it, then we interrogate it. No copy-paste, no manual stitching."</div>
+
+          <p style="margin:0 0 8px;font-size:13px;"><strong>Setup (1 min before stage):</strong> upload the 3 TXT files below into the demo user's <strong>OneDrive root</strong> (or any folder under <em>My files</em>). Word's <code>/file</code> picker indexes them after a few seconds. Open a blank document in <strong>Word for the web</strong>: <a href="https://word.new" target="_blank" rel="noopener">word.new</a>.</p>
+
+          <div class="demo-files">
+            <span class="demo-files-label">Reference files (upload to OneDrive before stage):</span>
+            <a class="download-btn" href="Demo-Files/DEMO-WORD-Margin-Brief/Contoso-QBR-Q4-2025.txt" download>Contoso-QBR-Q4-2025.txt</a>
+            <a class="download-btn" href="Demo-Files/DEMO-WORD-Margin-Brief/Contoso-Margin-Drivers-Q1-2026.txt" download>Contoso-Margin-Drivers-Q1-2026.txt</a>
+            <a class="download-btn" href="Demo-Files/DEMO-WORD-Margin-Brief/Contoso-Industries-Account-Brief.txt" download>Contoso-Industries-Account-Brief.txt</a>
+          </div>
+          <p style="margin:6px 0 8px;font-size:11.5px;color:var(--cp-text-muted);"><strong>Why TXT (not MD):</strong> the Word <code>/file</code> picker reliably supports DOCX, PPTX, PDF and TXT - .md is not indexed. The TXT copies hold the same Contoso content as the Markdown originals in DEMO-06.</p>
+
+          <p style="margin:10px 0 4px;font-size:12px;color:var(--cp-text-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">Step 1 - Draft from 3 references (paste into the Draft with Copilot box on a blank doc)</p>
+          <div class="prompt-block"><pre>Draft a one-page Q1 2026 margin performance brief for the Contoso Industries account team.
+
+Use /Contoso-QBR-Q4-2025.txt, /Contoso-Margin-Drivers-Q1-2026.txt and /Contoso-Industries-Account-Brief.txt as sources.
+
+Structure:
+- Headline (1 sentence): where we are vs Q4 baseline
+- Top 3 margin drivers (bulleted)
+- Top 3 risks for Q2 (bulleted)
+- 3 recommended actions with an owner per action
+
+Tone: factual, internal, executive. No marketing slang.</pre><button class="copy inline" type="button">Copy</button></div>
+
+          <p style="margin:10px 0 4px;font-size:12px;color:var(--cp-text-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">Step 2 - Rewrite by selection (select the intro paragraph, then click the Copilot icon in the left margin)</p>
+          <div class="prompt-block"><pre>Make this 3 sentences, executive tone, no jargon. Lead with the number.</pre><button class="copy inline" type="button">Copy</button></div>
+
+          <p style="margin:10px 0 4px;font-size:12px;color:var(--cp-text-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">Step 3 - Chat with the document (open the Copilot side pane)</p>
+          <div class="prompt-block"><pre>What are the top 3 risks for Q2 in this document, and what would I miss if I only read the headline numbers? Quote the source file for each risk.</pre><button class="copy inline" type="button">Copy</button></div>
+
+          <p style="margin:12px 0 4px;font-size:12px;color:var(--cp-text-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">Talking points: what Copilot in Word actually does</p>
+          <ul style="margin:0 0 0 18px;padding:0;font-size:12.5px;line-height:1.65;">
+            <li><strong>Draft from references</strong> - up to 20 files (DOCX/PPTX/PDF/TXT), emails or meetings via the <code>/file</code> picker - drafts are grounded in your tenant data.</li>
+            <li><strong>Rewrite</strong> - select text, ask for a different tone, length or structure. Formatting is preserved on Word for the web.</li>
+            <li><strong>Summarize</strong> any document with one click.</li>
+            <li><strong>Chat with your document</strong> - Q&A grounded in the open file (and any referenced files).</li>
+            <li><strong>Generate images</strong> for the document via the Copilot icon.</li>
+            <li><strong>Coaching</strong> - clarity, tone and inclusiveness suggestions on selected text.</li>
+            <li><strong>Enterprise security</strong> - reference files stay within the tenant; no public web grounding unless you ask.</li>
+          </ul>
+
+          <p style="margin:10px 0 0;font-size:12px;font-style:italic;background:var(--cp-accent-soft);padding:10px 14px;border-radius:6px;">"Three files, three prompts, a customer-ready one-pager - and we can interrogate it before we send it. That's the Word standard play, with your data, in your tenant."</p>
+
+          <p style="margin:10px 0 0;font-size:11.5px;color:var(--cp-text-muted);"><strong>Sources:</strong> <a href="https://support.microsoft.com/en-us/office/draft-and-add-content-with-copilot-in-word-069c91f0-9e42-4c9a-bbce-fddf5d581541" target="_blank" rel="noopener">Draft and add content with Copilot in Word</a> &middot; <a href="https://support.microsoft.com/en-us/office/welcome-to-copilot-in-word-2135e85f-a467-463b-b2f0-c51a46d625d1" target="_blank" rel="noopener">Welcome to Copilot in Word</a> &middot; <a href="https://support.microsoft.com/en-us/copilot-word" target="_blank" rel="noopener">Copilot in Word (overview)</a>. <strong>License:</strong> Microsoft 365 Copilot add-on required.</p>
+
+          <p style="margin:8px 0 0;font-size:11.5px;color:var(--cp-text-muted);"><strong>Gotchas:</strong> if the <code>/file</code> picker shows "no results", the files are still indexing - give OneDrive 30-60 s after upload. If the draft is too long, follow up with <em>"Cut it to half a page"</em> in the same Copilot box - no need to restart.</p>
         </div>
       </details>
 
