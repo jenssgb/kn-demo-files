@@ -1,0 +1,27 @@
+From: laura.berger@contoso-industries.com
+To: customerservice.eu@kuehne-nagel.com
+Cc: mark.huber@contoso-industries.com
+Date: 26 May 2026, 08:14 CET
+Subject: URGENT - where is container MSCU7654321? Production line stops Friday
+
+Hi KN team,
+
+I am chasing container MSCU7654321 (booking KN-OBL-2026-04421, Shanghai > Hamburg > Stuttgart).
+According to our last tracking notification (19 May) the vessel was off Suez. Since then - nothing.
+
+Situation on our side:
+- Stuttgart line 3 has 4 days of safety stock left. After that we stop production.
+- Our Q2 OTIF KPI with this account is already at 92% (target 95%). Another miss is escalated to the Contoso board.
+- The contract penalty for production stop is EUR 18.000 per day.
+
+I need three things by end of business today:
+1. Current position of the container and a confirmed new ETA in Stuttgart.
+2. Root cause for the silence since 19 May.
+3. A clear mitigation plan if the new ETA is after 29 May (Friday).
+
+Please loop in your KAM Markus Weber if needed - he has full context on our Q2 escalation.
+
+Thanks,
+Laura Berger
+Head of Inbound Logistics, Contoso Industries
++49 711 555 0142

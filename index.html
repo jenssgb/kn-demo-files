@@ -861,7 +861,7 @@
     <div class="demo-nav" id="demo-overview">
       <div class="demo-nav-title">Quick Jump - all confirmed demos, grouped by track</div>
       <div class="demo-grid">
-        <div class="demo-track-header"><span class="swatch" style="background:#0063b0;"></span>Microsoft 365 Copilot <span class="count">- 14 demos</span></div>
+        <div class="demo-track-header"><span class="swatch" style="background:#0063b0;"></span>Microsoft 365 Copilot <span class="count">- 15 demos</span></div>
         <a href="#demo-01" class="demo-tile m365"><span class="tile-icon"><img src="https://img.icons8.com/fluency/96/microsoft-copilot.png" alt="Copilot" loading="lazy"></span><span class="tile-id">DEMO-01</span><span class="tile-name">Work IQ · Collaboration Summary</span></a>
         <a href="#demo-02" class="demo-tile m365"><span class="tile-icon"><img src="https://img.icons8.com/fluency/96/microsoft-copilot.png" alt="Copilot" loading="lazy"></span><span class="tile-id">DEMO-02</span><span class="tile-name">Agents in M365 Copilot · Agent Store tour</span></a>
         <a href="#demo-03" class="demo-tile m365"><span class="tile-icon"><img src="https://img.icons8.com/color/96/microsoft-teams.png" alt="Teams" loading="lazy"></span><span class="tile-id">DEMO-03</span><span class="tile-name">Facilitator agent · Customer Call Recap</span></a>
@@ -869,6 +869,7 @@
         <a href="#demo-05" class="demo-tile m365"><span class="tile-icon"><img src="https://img.icons8.com/color/96/microsoft-excel-2019--v1.png" alt="Excel" loading="lazy"></span><span class="tile-id">DEMO-05</span><span class="tile-name">Edit with Copilot in Excel · Margin Analyzer</span></a>
         <a href="#demo-05b" class="demo-tile m365"><span class="tile-icon"><img src="https://img.icons8.com/color/96/microsoft-excel-2019--v1.png" alt="Excel" loading="lazy"></span><span class="tile-id">DEMO-05B</span><span class="tile-name">Excel Quick-Win · 500 exception notes → action</span></a>
         <a href="#demo-word" class="demo-tile m365"><span class="tile-icon"><img src="https://img.icons8.com/color/96/microsoft-word-2019--v1.png" alt="Word" loading="lazy"></span><span class="tile-id">DEMO-WORD</span><span class="tile-name">Copilot in Word · Q1 Margin Brief from 3 files</span></a>
+        <a href="#demo-cs" class="demo-tile m365"><span class="tile-icon"><img src="https://img.icons8.com/color/96/headset.png" alt="Customer Service" loading="lazy"></span><span class="tile-id">DEMO-CS</span><span class="tile-name">Customer Service Tour · Track &amp; Trace reply in 60 s</span></a>
         <a href="#demo-06" class="demo-tile m365"><span class="tile-icon"><img src="https://img.icons8.com/fluency/96/microsoft-copilot.png" alt="Copilot" loading="lazy"></span><span class="tile-id">DEMO-06</span><span class="tile-name">M365 Copilot Cowork · Q2 Turnaround</span></a>
         <a href="#demo-06b" class="demo-tile m365"><span class="tile-icon"><img src="https://img.icons8.com/fluency/96/microsoft-outlook-2019.png" alt="Outlook" loading="lazy"></span><span class="tile-id">DEMO-06B</span><span class="tile-name">Cowork Inbox Triage · 5 customer mails</span></a>
         <a href="#demo-06c" class="demo-tile m365"><span class="tile-icon"><img src="https://img.icons8.com/fluency/96/microsoft-outlook-2019.png" alt="Outlook" loading="lazy"></span><span class="tile-id">DEMO-06C</span><span class="tile-name">Cowork Quick-Send · Real email + meeting invite</span></a>
@@ -1276,6 +1277,68 @@ Tone: factual, internal, executive. No marketing slang.</pre><button class="copy
           <p style="margin:10px 0 0;font-size:11.5px;color:var(--cp-text-muted);"><strong>Sources:</strong> <a href="https://support.microsoft.com/en-us/office/draft-and-add-content-with-copilot-in-word-069c91f0-9e42-4c9a-bbce-fddf5d581541" target="_blank" rel="noopener">Draft and add content with Copilot in Word</a> &middot; <a href="https://support.microsoft.com/en-us/office/welcome-to-copilot-in-word-2135e85f-a467-463b-b2f0-c51a46d625d1" target="_blank" rel="noopener">Welcome to Copilot in Word</a> &middot; <a href="https://support.microsoft.com/en-us/copilot-word" target="_blank" rel="noopener">Copilot in Word (overview)</a>. <strong>License:</strong> Microsoft 365 Copilot add-on required.</p>
 
           <p style="margin:8px 0 0;font-size:11.5px;color:var(--cp-text-muted);"><strong>Gotchas:</strong> if the <code>/file</code> picker shows "no results", the files are still indexing - give OneDrive 30-60 s after upload. If the draft is too long, follow up with <em>"Cut it to half a page"</em> in the same Copilot box - no need to restart.</p>
+        </div>
+      </details>
+
+      <details id="demo-cs" class="demo-card prompt-card m365" style="--demo-color: #6f42c1;">
+        <summary>
+          <span class="demo-chevron">▸</span>
+          <div class="summary-main">
+            <h3>Demo CS - Customer Service Tour: from inbound exception mail to customer reply in 60 seconds</h3>
+            <p class="prompt-meta">M365 Copilot Chat (work) · Triage + Draft + Handover · 2-3 min &nbsp; <span class="env-tag vm-tag vm-kn-demo">KN-Demo-VM</span><span class="env-tag user-tag user-kn-demo">KN-Demo-User</span></p>
+            <p style="margin:6px 0 0;font-size:12px;color:var(--cp-text-muted);">The "Customer Service guided tour" - what every KN Customer Service rep does ten times a day: an angry shipper email lands in the inbox. With Copilot Chat grounded in three reference files, the rep produces a customer-ready, factually grounded reply plus a clean handover note - in one minute, without leaving the chat window.</p>
+          </div>
+        </summary>
+        <div class="demo-body">
+          <div class="audience-line">"This is the Track and Trace moment. Mail in, three files referenced, customer-ready reply out - with the new ETA, the root cause, two mitigation options, and a handover note for the night shift. All grounded, all auditable, all in your tenant."</div>
+
+          <p style="margin:0 0 8px;font-size:13px;"><strong>Setup (1 min before stage):</strong> upload the 3 TXT files below into the demo user's <strong>OneDrive root</strong>. Open <strong>Microsoft 365 Copilot Chat</strong> (<a href="https://m365.cloud.microsoft/chat" target="_blank" rel="noopener">m365.cloud.microsoft/chat</a>), make sure <em>Work</em> mode is selected.</p>
+
+          <div class="demo-files">
+            <span class="demo-files-label">Reference files (upload to OneDrive before stage):</span>
+            <a class="download-btn" href="Demo-Files/DEMO-CS-Track-Trace/Customer-Email-Container-MSCU7654321.txt" download>Customer-Email-Container-MSCU7654321.txt</a>
+            <a class="download-btn" href="Demo-Files/DEMO-CS-Track-Trace/Contoso-Shipment-Status-Live.txt" download>Contoso-Shipment-Status-Live.txt</a>
+            <a class="download-btn" href="Demo-Files/DEMO-CS-Track-Trace/Contoso-Industries-Account-Brief.txt" download>Contoso-Industries-Account-Brief.txt</a>
+          </div>
+          <p style="margin:6px 0 8px;font-size:11.5px;color:var(--cp-text-muted);"><strong>The narrative:</strong> Contoso's Head of Inbound Logistics (Laura Berger) mailed at 08:14: container MSCU7654321 went silent at Suez on 19 May, Stuttgart line 3 has 4 days of stock left, contract penalty EUR 18k per day. KN ops already prepared mitigation options - the rep just needs to surface them in a customer-ready reply.</p>
+
+          <p style="margin:10px 0 4px;font-size:12px;color:var(--cp-text-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">Step 1 - Triage the mail (paste into Copilot Chat)</p>
+          <div class="prompt-block"><pre>Read /Customer-Email-Container-MSCU7654321.txt.
+
+In 4 bullets: what is the customer asking, what is the SLA risk, who at KN owns this, and which reference files do I need to answer it well?</pre><button class="copy inline" type="button">Copy</button></div>
+
+          <p style="margin:10px 0 4px;font-size:12px;color:var(--cp-text-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">Step 2 - Draft the customer reply (one prompt, three sources)</p>
+          <div class="prompt-block"><pre>Draft a customer-ready reply to Laura Berger.
+
+Ground it in /Customer-Email-Container-MSCU7654321.txt, /Contoso-Shipment-Status-Live.txt and /Contoso-Industries-Account-Brief.txt.
+
+Structure:
+- Acknowledge the situation in one sentence (warm, factual, no excuses)
+- New ETA Stuttgart with the +days delta vs original
+- Root cause in one sentence
+- Two mitigation options with cost and impact, recommend one
+- Next step + name a KN owner
+
+Tone: empathetic, professional, no jargon. Sign as KN European Customer Service.</pre><button class="copy inline" type="button">Copy</button></div>
+
+          <p style="margin:10px 0 4px;font-size:12px;color:var(--cp-text-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">Step 3 - Handover note for the night shift queue</p>
+          <div class="prompt-block"><pre>Now create a 4-bullet internal handover for the night shift on this case: status, what we just sent the customer, what we are waiting for, and the trigger that escalates this to KAM Markus Weber.</pre><button class="copy inline" type="button">Copy</button></div>
+
+          <p style="margin:12px 0 4px;font-size:12px;color:var(--cp-text-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">Talking points: why this is the standard CS play</p>
+          <ul style="margin:0 0 0 18px;padding:0;font-size:12.5px;line-height:1.65;">
+            <li><strong>Grounded reply, not generic AI</strong> - every fact (ETA, root cause, cost) comes from the referenced files; nothing fabricated.</li>
+            <li><strong>One workflow, three artefacts</strong> - triage, customer reply, handover - in 60 seconds and one chat pane.</li>
+            <li><strong>Scales without a new system</strong> - this works today on every KN Copilot Chat seat; no Dynamics 365 build required.</li>
+            <li><strong>Pluggable</strong> - swap the OneDrive references for a SharePoint site, a connected myKN export, or a Copilot Studio agent that fetches live tracking - same prompt pattern.</li>
+            <li><strong>Audit trail</strong> - the reply cites the source files. Compliance can replay the conversation.</li>
+            <li><strong>Next step in maturity</strong> - move from rep-in-the-loop (this demo) to a Copilot Studio agent that handles tier-1 status requests autonomously (see CS-2 in this briefing).</li>
+          </ul>
+
+          <p style="margin:10px 0 0;font-size:12px;font-style:italic;background:var(--cp-accent-soft);padding:10px 14px;border-radius:6px;">"Mail in. Three files. One minute. A reply Contoso can act on - and a handover the night shift can pick up. That is the Customer Service moment for KN."</p>
+
+          <p style="margin:10px 0 0;font-size:11.5px;color:var(--cp-text-muted);"><strong>Sources:</strong> <a href="https://learn.microsoft.com/en-us/copilot/microsoft-365/" target="_blank" rel="noopener">Microsoft 365 Copilot for Work</a> &middot; <a href="https://support.microsoft.com/en-us/topic/reference-files-folders-and-cloud-data-in-microsoft-copilot-chats-d72fb840-1f08-4b5f-91d2-c6b1a4d2c9c8" target="_blank" rel="noopener">Reference files in Copilot Chat</a>. <strong>License:</strong> Microsoft 365 Copilot add-on required for grounded file references.</p>
+
+          <p style="margin:8px 0 0;font-size:11.5px;color:var(--cp-text-muted);"><strong>Gotchas:</strong> if the customer asks something the files don't cover, Copilot will say so - that is the point, don't override it. If a reference file does not appear after upload, wait 30-60 s for OneDrive indexing and retry the <code>/</code> picker.</p>
         </div>
       </details>
 

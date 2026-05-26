@@ -1,0 +1,45 @@
+CONTOSO INDUSTRIES - LIVE SHIPMENT STATUS
+Source: KN myKN portal export, 26 May 2026, 08:00 CET
+Customer: Contoso Industries (account 4711)
+KAM: Markus Weber (markus.weber@kuehne-nagel.com)
+
+==============================================================
+Booking: KN-OBL-2026-04421
+Container: MSCU7654321 (40' HC, gross 24.8 t)
+Commodity: automotive electronics components (HS 8542.31)
+Origin: Shanghai (CNSHA) | Destination: Stuttgart (DESTU) via Hamburg (DEHAM)
+Vessel: MSC ARIES voy. 412W | Carrier: MSC
+Initial ETA Stuttgart: 26 May 2026
+==============================================================
+
+TIMELINE
+- 28 Apr 2026  Container loaded Shanghai, vessel departed on schedule
+- 03 May 2026  Vessel transited Singapore - on plan
+- 19 May 2026  Last AIS ping NE of Suez Canal, position 30.9N / 32.4E
+- 21 May 2026  Suez Canal northbound convoy delayed by 36 h (sandstorm + traffic backlog)
+- 22 May 2026  Vessel entered Port Said - waiting for new convoy slot
+- 24 May 2026  Carrier issued NOR (Notice of Readiness) - new convoy 25 May night
+- 25 May 2026  Vessel cleared Suez 23:40 local
+- 26 May 2026  Vessel west of Crete, speed 21.4 kn, course 295
+
+REVISED ETAs
+- Hamburg port arrival     : 31 May 2026 (was 24 May) - delta +7 days
+- Hamburg port discharge   : 02 Jun 2026
+- Rail Hamburg > Stuttgart : 03 Jun 2026 (regular intermodal slot KN-IM-04)
+- Stuttgart terminal       : 04 Jun 2026 morning - delta +9 days
+
+ROOT CAUSE (confirmed with MSC ops 26 May 06:30)
+Suez Canal northbound traffic disruption (sandstorm 20-21 May + convoy reshuffle).
+No cargo damage. No customs hold. Container intact, seal MSC-7821334 intact.
+
+MITIGATION OPTIONS (KN ops prepared)
+A) Air-freight bridge: split 1.2 t of critical SKUs (line-stop parts) PVG > STR
+   via LH 8403 (cargo). ETA Stuttgart 28 May evening. Cost approx. EUR 14.500.
+B) Priority discharge in Hamburg + dedicated truck instead of rail
+   - saves ~24 h, ETA Stuttgart 03 Jun morning. Cost delta +EUR 1.200.
+C) No action: ETA Stuttgart 04 Jun morning. Customer line stops 30 May.
+
+INTERNAL NOTES
+- KAM Markus Weber briefed 26 May 07:15, awaiting customer decision on option A.
+- Contoso Q2 OTIF currently 91.8% (target 95%) - another miss triggers QBR escalation.
+- No previous Suez-related claims on this lane in last 12 months.
